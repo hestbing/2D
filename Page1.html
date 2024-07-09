@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitives</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <canvas id="glCanvas"></canvas>
+    <div>
+        <label for="shape">Выберите фигуру:</label>
+        <select id="shape">
+            <option value="circle">Окружность</option>
+            <option value="polygon">Многоугольник</option>
+        </select>
+
+        <div id="circle-controls">
+            <label for="radius">Радиус окружности:</label>
+            <input type="number" id="radius" value="50">
+        </div>
+
+        <div id="polygon-controls" style="display: none;">
+            <label for="sides">Количество сторон многоугольника:</label>
+            <input type="number" id="sides" value="5">
+        </div>
+
+        <button onclick="drawShapes()">Построить примитив</button>
+    </div>
+
+    <script src="server.js"></script>
+</body>
+</html>
